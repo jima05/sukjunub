@@ -5,12 +5,16 @@
 class SukjunubImages {
 
   // -- App Logos
-  static const String darkAppLogo = "assets/logos/t-store-splash-logo-black.png";
-  static const String lightAppLogo = "assets/logos/t-store-splash-logo-white.png";
+  static const String darkAppLogo1 = "assets\logos\sukjunub-splash-black-black.png";
+  static const String lightAppLogo1 = "assets\logos\sukjunub-splash-blue-white.png";
+  static const String darkAppLogo2 = "assets\logos\sukjunub-splash-blue-black.png";
+  static const String lightAppLogo2 = "assets\logos\sukjunub-splash-white-white.png";
 
   // -- Social Logos
   static const String google = "assets/logos/google-icon.png";
   static const String facebook = "assets/logos/facebook-icon.png";
+  static const String darkAppIcon = "assets\logos\sukjunub-icon-black.png";
+  static const String lightAppIcon = "assets\logos\sukjunub-icon-white.png";
 
   // -- Category Icons
   static const String sportIcon = "assets/icons/categories/icons8-bowling-64.png";
