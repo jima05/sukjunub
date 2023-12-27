@@ -1,0 +1,13 @@
+flutter_native_splash:
+  color: "#ffffff"
+  color_dark: "#272727"
+  image: assets\logos\sukjunub-splash-blue-black.png
+  image_dark: assets\logos\sukjunub-splash-blue-white.png
+
+android:
+  color: "#ffffff"
+  color_dark: "#272727"
+  image: assets\logos\sukjunub-splash-blue-black.png
+  image_dark: assets\logos\sukjunub-splash-blue-white.png
+
+web:  false

@@ -5,10 +5,13 @@
 class SukjunubImages {
 
   // -- App Logos
-  static const String darkAppLogo1 = "assets\logos\sukjunub-splash-black-black.png";
-  static const String lightAppLogo1 = "assets\logos\sukjunub-splash-blue-white.png";
-  static const String darkAppLogo2 = "assets\logos\sukjunub-splash-blue-black.png";
+  static const String lightAppLogo = "assets\logos\sukjunub-splash-blue-white.png";
+  static const String darkAppLogo = "assets\logos\sukjunub-splash-blue-black.png";
+  static const String darkAppLogo1 = "assets\logos\sukjunub-splash-black.png";
+  static const String lightAppLogo1 = "assets\logos\sukjunub-splash-white.png";
+  static const String darkAppLogo2 = "assets\logos\sukjunub-splash-black-black.png";
   static const String lightAppLogo2 = "assets\logos\sukjunub-splash-white-white.png";
+
 
   // -- Social Logos
   static const String google = "assets/logos/google-icon.png";
