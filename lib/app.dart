@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sukjunub/features/authentication/screens/onboarding.dart';
+import 'package:sukjunub/features/authentication/screens/onboarding/onboarding.dart';
 import 'package:sukjunub/utils/theme/theme.dart';
 
 

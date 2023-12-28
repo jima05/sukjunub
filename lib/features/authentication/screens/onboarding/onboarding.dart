@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sukjunub/features/authentication/screens/widgets/onboarding_dot_navigation.dart';
 import 'package:sukjunub/features/authentication/screens/widgets/onboarding_page.dart';
 import 'package:sukjunub/features/authentication/screens/widgets/onboarding_skip.dart';
 import 'package:sukjunub/utils/constants/image_strings.dart';
@@ -37,6 +38,7 @@ class OnBoardingScreen extends StatelessWidget {
           const onBoardingSkip(),
 
           // Dot Navigation smoothPageIndicator
+          const onBoardingDotNavigation(),
 
           // Circular Button
         ],
@@ -44,7 +46,4 @@ class OnBoardingScreen extends StatelessWidget {
     );
   }
 }
-
-
-
 
