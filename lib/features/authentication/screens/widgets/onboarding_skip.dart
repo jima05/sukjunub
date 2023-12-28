@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:sukjunub/utils/constants/sizes.dart';
 import 'package:sukjunub/utils/device/device_utility.dart';
 
-class onBoardingSkip extends StatelessWidget {
-  const onBoardingSkip({
+class OnBoardingSkip extends StatelessWidget {
+  const OnBoardingSkip({
     super.key,
   });
 

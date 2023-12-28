@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:sukjunub/utils/constants/sizes.dart';
 import 'package:sukjunub/utils/helpers/helper_functions.dart';
 
-class onBoardinPage extends StatelessWidget {
-  const onBoardinPage({
+class OnBoardinPage extends StatelessWidget {
+  const OnBoardinPage({
     super.key, required this.image, required this.title, required this.subTitle,
   });
 

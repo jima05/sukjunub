@@ -5,8 +5,8 @@ import 'package:sukjunub/utils/constants/sizes.dart';
 import 'package:sukjunub/utils/device/device_utility.dart';
 import 'package:sukjunub/utils/helpers/helper_functions.dart';
 
-class onBoardingDotNavigation extends StatelessWidget {
-  const onBoardingDotNavigation({
+class OnBoardingDotNavigation extends StatelessWidget {
+  const OnBoardingDotNavigation({
     super.key,
   });
 
