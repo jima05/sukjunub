@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:sukjunub/features/authentication/screens/onboarding.dart';
 import 'package:sukjunub/utils/theme/theme.dart';
 
 
@@ -8,10 +10,11 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       themeMode: ThemeMode.system,
       theme: SukjunubTheme.lightTheme,
       darkTheme: SukjunubTheme.darkTheme,
+      home: const OnBoardingScreen(),
     );
   }
 }
