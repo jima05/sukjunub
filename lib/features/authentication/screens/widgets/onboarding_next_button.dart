@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:sukjunub/features/authentication/controllers/onboarding_controller.dart';
 import 'package:sukjunub/utils/constants/colors.dart';
 import 'package:sukjunub/utils/constants/sizes.dart';
 import 'package:sukjunub/utils/device/device_utility.dart';
@@ -18,7 +19,7 @@ class OnBoardingNextButton extends StatelessWidget {
       right: SukjunubSizes.defaultSpace,
       bottom: SukjunubDeviceUtils.getBottomNavigationBarHeight(),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () => OnBoardingController.instance.nextPage(),
         style: ElevatedButton.styleFrom(
           shape: const CircleBorder(),
           backgroundColor: dark ? SukjunubColors.primary : Colors.black,

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:sukjunub/features/authentication/controllers/onboarding_controller.dart';
 import 'package:sukjunub/features/authentication/screens/widgets/onboarding_dot_navigation.dart';
 import 'package:sukjunub/features/authentication/screens/widgets/onboarding_next_button.dart';
 import 'package:sukjunub/features/authentication/screens/widgets/onboarding_page.dart';
@@ -11,11 +13,14 @@ class OnBoardingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(OnBoardingController());
     return Scaffold(
       body: Stack(
         children: [
           // Horizontal Scroll pages
           PageView(
+            controller: controller.pageController,
+            onPageChanged: controller.updatePageIndicator,
             children: const [
               OnBoardinPage(
                 image: SukjunubImages.onBoardingImage1,
@@ -48,4 +53,3 @@ class OnBoardingScreen extends StatelessWidget {
     );
   }
 }
-
