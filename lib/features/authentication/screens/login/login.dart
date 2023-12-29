@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:sukjunub/common/styles/spacing_styles.dart';
-import 'package:sukjunub/features/authentication/screens/login/widgets/form_divider.dart';
+import 'package:sukjunub/common/widgets/login_signup/form_divider.dart';
 import 'package:sukjunub/features/authentication/screens/login/widgets/login_form.dart';
 import 'package:sukjunub/features/authentication/screens/login/widgets/login_header.dart';
-import 'package:sukjunub/features/authentication/screens/login/widgets/social_buttons.dart';
+import 'package:sukjunub/common/widgets/login_signup/social_buttons.dart';
 import 'package:sukjunub/utils/constants/sizes.dart';
+import 'package:sukjunub/utils/constants/text_strings.dart';
 import 'package:sukjunub/utils/helpers/helper_functions.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -27,7 +29,7 @@ class LoginScreen extends StatelessWidget {
               SukjunubLoginForm(),
 
               // Divider
-              SukjunubFormDivider(dark: dark),
+              SukjunubFormDivider(dividerText: SukjunubTexts.orSignInWith.capitalize!),
 
               const SizedBox(height: SukjunubSizes.spaceBtwSections),
 
