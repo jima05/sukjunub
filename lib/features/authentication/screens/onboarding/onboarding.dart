@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sukjunub/features/authentication/controllers/onboarding_controller.dart';
-import 'package:sukjunub/features/authentication/screens/widgets/onboarding_dot_navigation.dart';
-import 'package:sukjunub/features/authentication/screens/widgets/onboarding_next_button.dart';
-import 'package:sukjunub/features/authentication/screens/widgets/onboarding_page.dart';
-import 'package:sukjunub/features/authentication/screens/widgets/onboarding_skip.dart';
+import 'package:sukjunub/features/authentication/screens/onboarding/widgets/onboarding_dot_navigation.dart';
+import 'package:sukjunub/features/authentication/screens/onboarding/widgets/onboarding_next_button.dart';
+import 'package:sukjunub/features/authentication/screens/onboarding/widgets/onboarding_page.dart';
+import 'package:sukjunub/features/authentication/screens/onboarding/widgets/onboarding_skip.dart';
 import 'package:sukjunub/utils/constants/image_strings.dart';
 import 'package:sukjunub/utils/constants/text_strings.dart';
 
