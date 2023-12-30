@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
+import 'package:get/get.dart';
+import 'package:sukjunub/common/widgets/login_signup/form_divider.dart';
+import 'package:sukjunub/common/widgets/login_signup/social_buttons.dart';
+import 'package:sukjunub/features/authentication/screens/signup/widgets/signup_form.dart';
 import 'package:sukjunub/utils/constants/sizes.dart';
 import 'package:sukjunub/utils/constants/text_strings.dart';
 
@@ -14,6 +17,7 @@ class SignupScreen extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(SukjunubSizes.defaultSpace),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               // Title
               Text(SukjunubTexts.signupTitle,
@@ -22,79 +26,18 @@ class SignupScreen extends StatelessWidget {
               const SizedBox(height: SukjunubSizes.spaceBtwSections),
 
               // Form
-              Form(
-                child: Column(
-                  children: [
-                    Row(
-                      children: [
-                        Expanded(
-                          child: TextFormField(
-                            expands: false,
-                            decoration: const InputDecoration(
-                              labelText: SukjunubTexts.firstName,
-                              prefixIcon: Icon(Iconsax.user),
-                            ),
-                          ),
-                        ),
-                        const SizedBox(
-                            width: SukjunubSizes.spaceBtwInputFields),
-                        Expanded(
-                          child: TextFormField(
-                            expands: false,
-                            decoration: const InputDecoration(
-                              labelText: SukjunubTexts.lastName,
-                              prefixIcon: Icon(Iconsax.user),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: SukjunubSizes.spaceBtwInputFields),
-                    // Username
-                    TextFormField(
-                      expands: false,
-                      decoration: const InputDecoration(
-                        labelText: SukjunubTexts.username,
-                        prefixIcon: Icon(Iconsax.user_edit),
-                      ),
-                    ),
+              const SukjunubSignupForm(),
+              const SizedBox(height: SukjunubSizes.spaceBtwSections),
 
-                    const SizedBox(height: SukjunubSizes.spaceBtwInputFields),
-                    // Email
-                    TextFormField(
-                      expands: false,
-                      decoration: const InputDecoration(
-                        labelText: SukjunubTexts.email,
-                        prefixIcon: Icon(Iconsax.direct),
-                      ),
-                    ),
 
-                    const SizedBox(height: SukjunubSizes.spaceBtwInputFields),
-                    // Phone Number
-                    TextFormField(
-                      expands: false,
-                      decoration: const InputDecoration(
-                        labelText: SukjunubTexts.phoneNo,
-                        prefixIcon: Icon(Iconsax.call),
-                      ),
-                    ),
+              // Divider
+              SukjunubFormDivider(
+                  dividerText: SukjunubTexts.orSignUpWith.capitalize!),
+              const SizedBox(height: SukjunubSizes.spaceBtwSections),
 
-                    const SizedBox(height: SukjunubSizes.spaceBtwInputFields),
-                    // Password
-                    TextFormField(
-                      decoration: const InputDecoration(
-                        prefixIcon: Icon(Iconsax.password_check),
-                        labelText: SukjunubTexts.password,
-                        suffixIcon: Icon(Iconsax.eye_slash),
-                      ),
-                    ),
-
-                    const SizedBox(height: SukjunubSizes.spaceBtwSections),
-                    // Terms & Conditions Checkbox
-                    // Signup Button
-                  ],
-                ),
-              ),
+              // Social Buttons
+              const SukjunubSocialButtons(),
+              const SizedBox(height: SukjunubSizes.spaceBtwSections),
             ],
           ),
         ),
@@ -102,3 +45,4 @@ class SignupScreen extends StatelessWidget {
     );
   }
 }
+
