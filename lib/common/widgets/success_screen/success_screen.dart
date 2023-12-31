@@ -13,7 +13,7 @@ class SuccessScreen extends StatelessWidget {
       required this.onPressed});
 
   final String image, title, subtitle;
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +43,7 @@ class SuccessScreen extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: onPressed,
+                  onPressed:  onPressed,
                   child: const Text(SukjunubTexts.sContinue),
                 ),
               ),

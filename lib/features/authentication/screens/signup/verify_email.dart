@@ -54,11 +54,11 @@ class VerifyEmailScreen extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () => Get.to(
-                    () => const SuccessScreen(
+                    () =>  SuccessScreen(
                       image: SukjunubImages.staticSuccessIllustration,
                       title: SukjunubTexts.yourAccountCreatedTitle,
                       subtitle: SukjunubTexts.yourAccountCreatedSubTitle,
-                      onPressed: ()=> Get.to(()=> const LoginScreen()),
+                      onPressed: () => Get.to(()=> const LoginScreen()),
                     ),
                   ),
                   child: const Text(SukjunubTexts.sContinue),
