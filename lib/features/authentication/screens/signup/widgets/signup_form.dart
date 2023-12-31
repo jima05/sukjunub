@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:sukjunub/features/authentication/screens/signup/verify_email.dart';
 import 'package:sukjunub/features/authentication/screens/signup/widgets/terms_and_conditions_checkbox.dart';
 import 'package:sukjunub/utils/constants/sizes.dart';
 import 'package:sukjunub/utils/constants/text_strings.dart';
@@ -9,10 +11,8 @@ class SukjunubSignupForm extends StatelessWidget {
     super.key,
   });
 
-
   @override
   Widget build(BuildContext context) {
-
     return Form(
       child: Column(
         children: [
@@ -27,8 +27,7 @@ class SukjunubSignupForm extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(
-                  width: SukjunubSizes.spaceBtwInputFields),
+              const SizedBox(width: SukjunubSizes.spaceBtwInputFields),
               Expanded(
                 child: TextFormField(
                   expands: false,
@@ -49,7 +48,7 @@ class SukjunubSignupForm extends StatelessWidget {
               prefixIcon: Icon(Iconsax.user_edit),
             ),
           ),
-    
+
           const SizedBox(height: SukjunubSizes.spaceBtwInputFields),
           // Email
           TextFormField(
@@ -59,7 +58,7 @@ class SukjunubSignupForm extends StatelessWidget {
               prefixIcon: Icon(Iconsax.direct),
             ),
           ),
-    
+
           const SizedBox(height: SukjunubSizes.spaceBtwInputFields),
           // Phone Number
           TextFormField(
@@ -69,7 +68,7 @@ class SukjunubSignupForm extends StatelessWidget {
               prefixIcon: Icon(Iconsax.call),
             ),
           ),
-    
+
           const SizedBox(height: SukjunubSizes.spaceBtwInputFields),
           // Password
           TextFormField(
@@ -79,18 +78,18 @@ class SukjunubSignupForm extends StatelessWidget {
               suffixIcon: Icon(Iconsax.eye_slash),
             ),
           ),
-    
+
           const SizedBox(height: SukjunubSizes.spaceBtwSections),
           // Terms & Conditions Checkbox
           const SukjunubTermsandConditionsCheckbox(),
-    
+
           const SizedBox(height: SukjunubSizes.spaceBtwSections),
-    
+
           // Signup Button
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () => Get.to(() => const VerifyEmailScreen()),
               child: const Text(SukjunubTexts.createAccount),
             ),
           ),

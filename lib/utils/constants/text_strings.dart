@@ -8,7 +8,7 @@ class SukjunubTexts {
   static const String done = "Done";
   static const String submit = "Submit";
   static const String appName = "Sukjunub";
-  static const String tContinue = "Continue";
+  static const String sContinue = "Continue";
 
 
   // -- OnBoarding Texts
