@@ -1,30 +1,29 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:sukjunub/common/styles/spacing_styles.dart';
+import 'package:get/get.dart';
 import 'package:sukjunub/utils/constants/image_strings.dart';
 import 'package:sukjunub/utils/constants/sizes.dart';
 import 'package:sukjunub/utils/constants/text_strings.dart';
 import 'package:sukjunub/utils/helpers/helper_functions.dart';
 
-class SuccessScreen extends StatelessWidget {
-  const SuccessScreen(
-      {super.key,
-      required this.image,
-      required this.title,
-      required this.subtitle,
-      required this.onPressed});
 
-  final String image, title, subtitle;
-  final VoidCallback? onPressed;
+class ResetPassword extends StatelessWidget {
+  const ResetPassword({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: SukjunubSpacingStyle.paddingWithAppbarHeight * 2,
-          child: Column(
-            children: [
-              // Image
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        actions: [
+          IconButton(onPressed: Get.back, icon: const Icon(CupertinoIcons.clear))
+        ],
+      ),
+      body:  Padding(
+        padding: const EdgeInsets.all(SukjunubSizes.defaultSpace),
+        child: Column(
+          children: [
+                // Image
               Image(
                 image: const AssetImage(SukjunubImages.deliveredEmailIllustration),
                 width: SukjunubHelperFunctions.screenWidth() * 0.6,
@@ -39,19 +38,28 @@ class SuccessScreen extends StatelessWidget {
               Text(SukjunubTexts.changeYourPasswordSubTitle,
                   style: Theme.of(context).textTheme.labelMedium,
                   textAlign: TextAlign.center),
+              const SizedBox(height: SukjunubSizes.spaceBtwSections),
+
 
               // Buttons
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed:  onPressed,
-                  child: const Text(SukjunubTexts.sContinue),
+                  onPressed: (){},
+                  child: const Text(SukjunubTexts.done),
                 ),
               ),
-            ],
-          ),
-        ),
-      ),
+              const SizedBox(height: SukjunubSizes.spaceBtwItems),
+              SizedBox(
+                width: double.infinity,
+                child: TextButton(
+                  onPressed: (){},
+                  child: const Text(SukjunubTexts.resendEmail),
+                ),
+              ),
+       
+          ],
+        ),),
     );
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:sukjunub/features/authentication/screens/password_configuration/forget_password.dart';
 import 'package:sukjunub/features/authentication/screens/signup/signup.dart';
 import 'package:sukjunub/utils/constants/sizes.dart';
 import 'package:sukjunub/utils/constants/text_strings.dart';
@@ -53,7 +54,7 @@ class SukjunubLoginForm extends StatelessWidget {
     
                 // Forget Password
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () => Get.to(()=> const ForgetPassword()),
                   child: const Text(SukjunubTexts.forgetPassword),
                 ),
               ],
