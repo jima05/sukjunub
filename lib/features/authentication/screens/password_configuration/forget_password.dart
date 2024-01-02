@@ -33,6 +33,9 @@ class ForgetPassword extends StatelessWidget {
                 labelText: SukjunubTexts.email, prefixIcon: Icon(Iconsax.direct_right),
               ),
             ),
+
+            const SizedBox(height: SukjunubSizes.spaceBtwSections),
+
             // Submit button
             SizedBox(
               width: double.infinity,
