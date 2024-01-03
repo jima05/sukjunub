@@ -34,6 +34,7 @@ class SukjunubPrimaryHeaderContainer extends StatelessWidget {
                 child: SukjunubCircularContainer(
                     backgroundColor: SukjunubColors.textWhite.withOpacity(0.1)),
               ),
+              child,
             ],
           ),
         ),
