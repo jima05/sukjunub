@@ -63,7 +63,7 @@ class SukjunubTexts {
 
   // -- Home
   static const String homeAppbarTitle = "Good day for shopping";
-  static const String homeAppbarSubTitle = "All You Need In One Place";
+  static const String homeAppbarSubTitle = "Jima Benjamin";
 
 
 }
