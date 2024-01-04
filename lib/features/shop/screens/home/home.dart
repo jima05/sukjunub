@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:sukjunub/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:sukjunub/common/widgets/custom_shapes/containers/search_container.dart';
+import 'package:sukjunub/common/widgets/text/section_heading.dart';
 import 'package:sukjunub/features/shop/screens/home/widgets/home_appbar.dart';
-import 'package:sukjunub/utils/constants/colors.dart';
+import 'package:sukjunub/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:sukjunub/utils/constants/sizes.dart';
-import 'package:sukjunub/utils/device/device_utility.dart';
-import 'package:sukjunub/utils/helpers/helper_functions.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -24,8 +22,30 @@ class HomeScreen extends StatelessWidget {
                 SukjunubHomeAppBar(),
                 SizedBox(height: SukjunubSizes.spaceBtwSections),
                 // SearchBar
-                SukjunubSearchContainer(text: 'Search in Store',),
+                SukjunubSearchContainer(
+                  text: 'Search in Store',
+                ),
+                SizedBox(height: SukjunubSizes.spaceBtwSections),
+
                 // Categories
+                Padding(
+                  padding:
+                      EdgeInsets.only(left: SukjunubSizes.defaultSpace),
+                  child: Column(
+                    children: [
+                      // Heading
+                      SukjunubSectionHeading(
+                        title: 'Porpular Categories',
+                        showActionButton: false,
+                        textColor: Colors.white,
+                      ),
+                      SizedBox(height: SukjunubSizes.spaceBtwItems),
+
+                      //  // Categories list
+                      SukjunubHomeCategories(),
+                    ],
+                  ),
+                )
               ],
             )),
           ],
@@ -34,4 +54,5 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
 
