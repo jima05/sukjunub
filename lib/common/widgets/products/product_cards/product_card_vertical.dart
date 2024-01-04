@@ -4,6 +4,7 @@ import 'package:sukjunub/common/styles/shadows.dart';
 import 'package:sukjunub/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:sukjunub/common/widgets/icons/circular_icon.dart';
 import 'package:sukjunub/common/widgets/images/rounded_image.dart';
+import 'package:sukjunub/common/widgets/texts/product_price_text.dart';
 import 'package:sukjunub/common/widgets/texts/product_title_text.dart';
 import 'package:sukjunub/utils/constants/colors.dart';
 import 'package:sukjunub/utils/constants/image_strings.dart';
@@ -106,12 +107,9 @@ class SukjunubProductCardVertical extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       //  Price
-                      Text(
-                        '\$35.5',
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                        style: Theme.of(context).textTheme.headlineMedium,
-                      ),
+                      const SukjunubProductPriceText(price: '35.0'),
+
+                      // Add To Cart
                       Container(
                         decoration: const BoxDecoration(
                           color: SukjunubColors.dark,

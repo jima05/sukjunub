@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sukjunub/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:sukjunub/common/widgets/custom_shapes/containers/search_container.dart';
+import 'package:sukjunub/common/widgets/layouts/grid_layout.dart';
 import 'package:sukjunub/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:sukjunub/common/widgets/texts/section_heading.dart';
 import 'package:sukjunub/features/shop/screens/home/widgets/home_appbar.dart';
@@ -45,13 +46,11 @@ class HomeScreen extends StatelessWidget {
 
                       //  // Categories list
                       SukjunubHomeCategories(),
-
                     ],
                   ),
                 )
               ],
             )),
-
 
             // Body
             Padding(
@@ -66,10 +65,14 @@ class HomeScreen extends StatelessWidget {
                         SukjunubImages.promoBanner3
                       ],
                     ),
-                const SizedBox(height: SukjunubSizes.spaceBtwSections),
+                    const SizedBox(height: SukjunubSizes.spaceBtwSections),
 
                     // Popular Products
-                    const SukjunubProductCardVertical()
+                    SukjunubGridLayout(
+                      itemCount: 2,
+                      itemBuilder: (_, index) =>
+                          const SukjunubProductCardVertical(),
+                    ),
                   ],
                 ))
           ],
