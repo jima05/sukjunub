@@ -26,7 +26,7 @@ class LoginScreen extends StatelessWidget {
               SukjunubLoginHeader(dark: dark),
 
               // Form
-              SukjunubLoginForm(),
+              const SukjunubLoginForm(),
 
               // Divider
               SukjunubFormDivider(dividerText: SukjunubTexts.orSignInWith.capitalize!),
@@ -34,7 +34,7 @@ class LoginScreen extends StatelessWidget {
               const SizedBox(height: SukjunubSizes.spaceBtwSections),
 
               // Footer
-              SukjunubSocialButtons()
+              const SukjunubSocialButtons()
             ],
           ), 
         ),

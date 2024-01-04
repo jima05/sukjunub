@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sukjunub/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:sukjunub/common/widgets/custom_shapes/containers/search_container.dart';
-import 'package:sukjunub/common/widgets/text/section_heading.dart';
+import 'package:sukjunub/common/widgets/products/product_cards/product_card_vertical.dart';
+import 'package:sukjunub/common/widgets/texts/section_heading.dart';
 import 'package:sukjunub/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:sukjunub/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:sukjunub/features/shop/screens/home/widgets/promo_slider.dart';
@@ -44,20 +45,31 @@ class HomeScreen extends StatelessWidget {
 
                       //  // Categories list
                       SukjunubHomeCategories(),
+
                     ],
                   ),
                 )
               ],
             )),
 
+
             // Body
             Padding(
                 padding: const EdgeInsets.all(SukjunubSizes.defaultSpace),
-                child: SukjunubPromoSlider(
-                  banners: const [
-                    SukjunubImages.promoBanner1,
-                    SukjunubImages.promoBanner1,
-                    SukjunubImages.promoBanner1
+                child: Column(
+                  children: [
+                    // Promo Slider
+                    SukjunubPromoSlider(
+                      banners: const [
+                        SukjunubImages.promoBanner1,
+                        SukjunubImages.promoBanner2,
+                        SukjunubImages.promoBanner3
+                      ],
+                    ),
+                const SizedBox(height: SukjunubSizes.spaceBtwSections),
+
+                    // Popular Products
+                    const SukjunubProductCardVertical()
                   ],
                 ))
           ],
