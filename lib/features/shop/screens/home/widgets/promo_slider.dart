@@ -11,7 +11,10 @@ import 'package:sukjunub/utils/constants/sizes.dart';
 class SukjunubPromoSlider extends StatelessWidget {
   SukjunubPromoSlider({
     super.key,
+    required this.banners,
   });
+
+  final List<String> banners;
 
   final controller = Get.put(HomeController());
 
@@ -20,27 +23,31 @@ class SukjunubPromoSlider extends StatelessWidget {
     return Column(
       children: [
         CarouselSlider(
-            options: CarouselOptions(
+          options: CarouselOptions(
               viewportFraction: 1,
-              onPageChanged: (index,_)=>controller.updatePageIndicator(index)
-            ),
-            items: const [
-              SukjunubRoundedImage(imageUrl: SukjunubImages.promoBanner1),
-              SukjunubRoundedImage(imageUrl: SukjunubImages.promoBanner2),
-              SukjunubRoundedImage(imageUrl: SukjunubImages.promoBanner3),
-            ]),
+              onPageChanged: (index, _) =>
+                  controller.updatePageIndicator(index)),
+          items: banners
+              .map((url) => SukjunubRoundedImage(imageUrl: url))
+              .toList(),
+        ),
         const SizedBox(height: SukjunubSizes.spaceBtwItems),
-        Obx(
-          () => Row(
-            children: [
-              for (int i = 0; i < 3; i++)
-                SukjunubCircularContainer(
-                  width: 20,
-                  height: 4,
-                  margin: const EdgeInsets.only(right: 10),
-                  backgroundColor: controller.carousalCurrentIndex.value == i? SukjunubColors.primary : SukjunubColors.grey,
-                ),
-            ],
+        Center(
+          child: Obx(
+            () => Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                for (int i = 0; i < banners.length; i++)
+                  SukjunubCircularContainer(
+                    width: 20,
+                    height: 4,
+                    margin: const EdgeInsets.only(right: 10),
+                    backgroundColor: controller.carousalCurrentIndex.value == i
+                        ? SukjunubColors.primary
+                        : SukjunubColors.grey,
+                  ),
+              ],
+            ),
           ),
         )
       ],
