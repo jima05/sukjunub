@@ -4,6 +4,7 @@ import 'package:sukjunub/common/widgets/custom_shapes/containers/search_containe
 import 'package:sukjunub/common/widgets/text/section_heading.dart';
 import 'package:sukjunub/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:sukjunub/features/shop/screens/home/widgets/home_categories.dart';
+import 'package:sukjunub/features/shop/screens/home/widgets/promo_slider.dart';
 import 'package:sukjunub/utils/constants/sizes.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -11,11 +12,11 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return  Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SukjunubPrimaryHeaderContainer(
+            const SukjunubPrimaryHeaderContainer(
                 child: Column(
               children: [
                 // AppBar
@@ -29,8 +30,7 @@ class HomeScreen extends StatelessWidget {
 
                 // Categories
                 Padding(
-                  padding:
-                      EdgeInsets.only(left: SukjunubSizes.defaultSpace),
+                  padding: EdgeInsets.only(left: SukjunubSizes.defaultSpace),
                   child: Column(
                     children: [
                       // Heading
@@ -48,11 +48,15 @@ class HomeScreen extends StatelessWidget {
                 )
               ],
             )),
+
+            // Body
+            Padding(
+                padding: const EdgeInsets.all(SukjunubSizes.defaultSpace),
+                child: SukjunubPromoSlider())
           ],
         ),
       ),
     );
   }
 }
-
 
