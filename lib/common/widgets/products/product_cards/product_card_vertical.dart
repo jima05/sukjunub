@@ -102,12 +102,20 @@ class SukjunubProductCardVertical extends StatelessWidget {
                       )
                     ],
                   ),
-                  
+                ],
+              ),
+            ),
+
+             const Spacer(),
+
                    Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       //  Price
-                      const SukjunubProductPriceText(price: '35.0'),
+                      const Padding(
+                        padding: EdgeInsets.only(left: SukjunubSizes.sm),
+                        child: SukjunubProductPriceText(price: '35.0'),
+                      ),
 
                       // Add To Cart
                       Container(
@@ -124,10 +132,7 @@ class SukjunubProductCardVertical extends StatelessWidget {
                           child: Center(child: Icon(Iconsax.add, color: SukjunubColors.white,))),
                       ),
                     ],
-                  )
-                ],
-              ),
-            ),
+                  ),
           ],
         ),
       ),
