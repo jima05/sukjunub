@@ -67,6 +67,11 @@ class HomeScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: SukjunubSizes.spaceBtwSections),
 
+                    // Heading
+                    SukjunubSectionHeading(title: 'Popular Products', onPressed: (){}),
+                    const SizedBox(height: SukjunubSizes.spaceBtwItems),
+
+
                     // Popular Products
                     SukjunubGridLayout(
                       itemCount: 2,
