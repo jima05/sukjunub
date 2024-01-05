@@ -76,7 +76,7 @@ class HomeScreen extends StatelessWidget {
                     SukjunubGridLayout(
                       itemCount: 2,
                       itemBuilder: (_, index) =>
-                          const SukjunubProductCardVertical(),
+                          const SukjunubProductCardVertical(), 
                     ),
                   ],
                 ))

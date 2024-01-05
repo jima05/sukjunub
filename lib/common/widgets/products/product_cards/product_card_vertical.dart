@@ -4,6 +4,7 @@ import 'package:sukjunub/common/styles/shadows.dart';
 import 'package:sukjunub/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:sukjunub/common/widgets/icons/circular_icon.dart';
 import 'package:sukjunub/common/widgets/images/rounded_image.dart';
+import 'package:sukjunub/common/widgets/texts/brand_title_text_with_verification.dart';
 import 'package:sukjunub/common/widgets/texts/product_price_text.dart';
 import 'package:sukjunub/common/widgets/texts/product_title_text.dart';
 import 'package:sukjunub/utils/constants/colors.dart';
@@ -20,7 +21,7 @@ class SukjunubProductCardVertical extends StatelessWidget {
 
     // Container with side paddings, color, radius and shadow.
     return GestureDetector(
-      onTap: (){},
+      onTap: () {},
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),
@@ -35,20 +36,22 @@ class SukjunubProductCardVertical extends StatelessWidget {
             SukjunubRoundedContainer(
               height: 180,
               padding: const EdgeInsets.all(SukjunubSizes.sm),
-              backgroundColor: dark ? SukjunubColors.dark : SukjunubColors.light,
+              backgroundColor:
+                  dark ? SukjunubColors.dark : SukjunubColors.light,
               child: Stack(
                 children: [
                   // Thumbnail Image
                   const SukjunubRoundedImage(
                       imageUrl: SukjunubImages.productImage1,
                       applyImageRadius: true),
-      
+
                   // Sale Tag
                   Positioned(
                     top: 12,
                     child: SukjunubRoundedContainer(
                       radius: SukjunubSizes.sm,
-                      backgroundColor: SukjunubColors.secondary.withOpacity(0.8),
+                      backgroundColor:
+                          SukjunubColors.secondary.withOpacity(0.8),
                       padding: const EdgeInsets.symmetric(
                           horizontal: SukjunubSizes.sm,
                           vertical: SukjunubSizes.xs),
@@ -60,7 +63,7 @@ class SukjunubProductCardVertical extends StatelessWidget {
                       ),
                     ),
                   ),
-      
+
                   // Favorite Icon
                   const Positioned(
                     top: 0,
@@ -74,68 +77,60 @@ class SukjunubProductCardVertical extends StatelessWidget {
               ),
             ),
             const SizedBox(height: SukjunubSizes.spaceBtwItems / 2),
-      
+
             // --Details
-            Padding(
-              padding: const EdgeInsets.only(left: SukjunubSizes.sm),
+            const Padding(
+              padding: EdgeInsets.only(left: SukjunubSizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const SukjunubProductTitleText(
+                  SukjunubProductTitleText(
                     title: 'Green Nike Air Shoes',
                     smallSize: true,
                   ),
-                  const SizedBox(height: SukjunubSizes.spaceBtwItems / 2),
-                  Row(
-                    children: [
-                      Text(
-                        'Nike',
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                        style: Theme.of(context).textTheme.labelMedium,
-                      ),
-                      const SizedBox(width: SukjunubSizes.xs),
-                      const Icon(
-                        Iconsax.verify5,
-                        color: SukjunubColors.primary,
-                        size: SukjunubSizes.iconXs,
-                      )
-                    ],
-                  ),
+                  SizedBox(height: SukjunubSizes.spaceBtwItems / 2),
+                  SukjunubBrandTitleWithVerification(title: 'Nike',),
                 ],
               ),
             ),
 
-             const Spacer(),
+            const Spacer(),
 
-                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      //  Price
-                      const Padding(
-                        padding: EdgeInsets.only(left: SukjunubSizes.sm),
-                        child: SukjunubProductPriceText(price: '35.0'),
-                      ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                //  Price
+                const Padding(
+                  padding: EdgeInsets.only(left: SukjunubSizes.sm),
+                  child: SukjunubProductPriceText(price: '35.0'),
+                ),
 
-                      // Add To Cart
-                      Container(
-                        decoration: const BoxDecoration(
-                          color: SukjunubColors.dark,
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(SukjunubSizes.cardRadiusMd),
-                            bottomRight: Radius.circular(SukjunubSizes.productImageRadius),
-                          ),
-                        ),
-                        child: const SizedBox(
-                          width: SukjunubSizes.iconLg * 1.2,
-                          height: SukjunubSizes.iconLg * 1.2,
-                          child: Center(child: Icon(Iconsax.add, color: SukjunubColors.white,))),
-                      ),
-                    ],
+                // Add To Cart
+                Container(
+                  decoration: const BoxDecoration(
+                    color: SukjunubColors.dark,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(SukjunubSizes.cardRadiusMd),
+                      bottomRight:
+                          Radius.circular(SukjunubSizes.productImageRadius),
+                    ),
                   ),
+                  child: const SizedBox(
+                      width: SukjunubSizes.iconLg * 1.2,
+                      height: SukjunubSizes.iconLg * 1.2,
+                      child: Center(
+                          child: Icon(
+                        Iconsax.add,
+                        color: SukjunubColors.white,
+                      ))),
+                ),
+              ],
+            ),
           ],
         ),
       ),
     );
   }
 }
+
+
