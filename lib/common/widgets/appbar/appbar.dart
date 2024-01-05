@@ -40,7 +40,6 @@ class SukjunubAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  // TODO: implement preferredSize
   Size get preferredSize =>
       Size.fromHeight(SukjunubDeviceUtils.getAppBarHeight());
 }
