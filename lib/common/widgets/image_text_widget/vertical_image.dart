@@ -9,7 +9,7 @@ class SukjunubVerticalImageText extends StatelessWidget {
     required this.image,
     required this.title,
     this.textColor = SukjunubColors.white,
-    this.backgroundColor = SukjunubColors.white,
+    this.backgroundColor,
     this.onTap,
   });
 
@@ -34,7 +34,7 @@ class SukjunubVerticalImageText extends StatelessWidget {
               padding: const EdgeInsets.all(SukjunubSizes.sm),
               decoration: BoxDecoration(
                 color: backgroundColor ??
-                    (dark ? SukjunubColors.black : SukjunubColors.white),
+                    (dark ? SukjunubColors.white : SukjunubColors.black),
                 borderRadius: BorderRadius.circular(100),
               ),
               child: Center(
