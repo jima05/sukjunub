@@ -102,4 +102,3 @@ class StoreScreen extends StatelessWidget {
     );
   }
 }
-

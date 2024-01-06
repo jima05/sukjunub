@@ -46,6 +46,9 @@ class HomeScreen extends StatelessWidget {
 
                       //  // Categories list
                       SukjunubHomeCategories(),
+                      SizedBox(
+                        height: SukjunubSizes.spaceBtwSections,
+                      ),
                     ],
                   ),
                 )
@@ -68,15 +71,15 @@ class HomeScreen extends StatelessWidget {
                     const SizedBox(height: SukjunubSizes.spaceBtwSections),
 
                     // Heading
-                    SukjunubSectionHeading(title: 'Popular Products', onPressed: (){}),
+                    SukjunubSectionHeading(
+                        title: 'Popular Products', onPressed: () {}),
                     const SizedBox(height: SukjunubSizes.spaceBtwItems),
-
 
                     // Popular Products
                     SukjunubGridLayout(
                       itemCount: 2,
                       itemBuilder: (_, index) =>
-                          const SukjunubProductCardVertical(), 
+                          const SukjunubProductCardVertical(),
                     ),
                   ],
                 ))

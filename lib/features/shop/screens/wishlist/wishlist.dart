@@ -15,9 +15,15 @@ class WishlistScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: SukjunubAppBar(
-        title: Text('Wishlist', style: Theme.of(context).textTheme.headlineMedium,),
+        title: Text(
+          'Wishlist',
+          style: Theme.of(context).textTheme.headlineMedium,
+        ),
         actions: [
-          SukjunubCircularIcon(icon: Iconsax.add, onPressesd: () => Get.to(const HomeScreen()),),
+          SukjunubCircularIcon(
+            icon: Iconsax.add,
+            onPressesd: () => Get.to(const HomeScreen()),
+          ),
         ],
       ),
       body: SingleChildScrollView(
@@ -25,7 +31,10 @@ class WishlistScreen extends StatelessWidget {
           padding: const EdgeInsets.all(SukjunubSizes.defaultSpace),
           child: Column(
             children: [
-              SukjunubGridLayout(itemCount: 5, itemBuilder: (_,index) => const SukjunubProductCardVertical()),
+              SukjunubGridLayout(
+                  itemCount: 5,
+                  itemBuilder: (_, index) =>
+                      const SukjunubProductCardVertical()),
             ],
           ),
         ),
