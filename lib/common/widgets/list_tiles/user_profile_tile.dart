@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:sukjunub/common/widgets/images/circular_image.dart';
@@ -7,8 +6,10 @@ import 'package:sukjunub/utils/constants/image_strings.dart';
 
 class SukjunubUserProfileTile extends StatelessWidget {
   const SukjunubUserProfileTile({
-    super.key,
+    super.key, required this.onPressed,
   });
+
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +35,7 @@ class SukjunubUserProfileTile extends StatelessWidget {
             .apply(color: SukjunubColors.white),
       ),
       trailing: IconButton(
-        onPressed: () {},
+        onPressed: onPressed,
         icon: const Icon(Iconsax.edit, color: SukjunubColors.white),
       ),
     );

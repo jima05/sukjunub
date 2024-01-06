@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:sukjunub/common/widgets/appbar/appbar.dart';
 import 'package:sukjunub/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:sukjunub/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:sukjunub/common/widgets/list_tiles/user_profile_tile.dart';
 import 'package:sukjunub/common/widgets/texts/section_heading.dart';
+import 'package:sukjunub/features/personalization/screens/profile/profile.dart';
 import 'package:sukjunub/utils/constants/colors.dart';
 import 'package:sukjunub/utils/constants/sizes.dart';
 
@@ -21,6 +23,7 @@ class SettingsScreen extends StatelessWidget {
             SukjunubPrimaryHeaderContainer(
                 child: Column(
               children: [
+                // AppBar
                 SukjunubAppBar(
                   title: Text(
                     'Account',
@@ -32,7 +35,7 @@ class SettingsScreen extends StatelessWidget {
                 ),
 
                 // Profile
-                const SukjunubUserProfileTile(),
+                SukjunubUserProfileTile( onPressed: ()=>Get.to(()=> const ProfileScreen())),
 
                 const SizedBox(height: SukjunubSizes.spaceBtwSections),
               ],
