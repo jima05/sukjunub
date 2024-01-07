@@ -99,8 +99,12 @@ class ProfileScreen extends StatelessWidget {
 
               // Delete Button
               Center(
-                child: TextButton(onPressed: () {  },
-                child: const Text('Delete Account', style: TextStyle(color: Colors.red),)),
+                child: TextButton(
+                    onPressed: () {},
+                    child: const Text(
+                      'Delete Account',
+                      style: TextStyle(color: Colors.red),
+                    )),
               )
             ],
           ),

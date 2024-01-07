@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:sukjunub/common/styles/shadows.dart';
 import 'package:sukjunub/common/widgets/custom_shapes/containers/rounded_container.dart';
@@ -7,6 +8,7 @@ import 'package:sukjunub/common/widgets/images/rounded_image.dart';
 import 'package:sukjunub/common/widgets/texts/brand_title_text_with_verification.dart';
 import 'package:sukjunub/common/widgets/texts/product_price_text.dart';
 import 'package:sukjunub/common/widgets/texts/product_title_text.dart';
+import 'package:sukjunub/features/shop/screens/product_details/product_detail.dart';
 import 'package:sukjunub/utils/constants/colors.dart';
 import 'package:sukjunub/utils/constants/image_strings.dart';
 import 'package:sukjunub/utils/constants/sizes.dart';
@@ -21,7 +23,7 @@ class SukjunubProductCardVertical extends StatelessWidget {
 
     // Container with side paddings, color, radius and shadow.
     return GestureDetector(
-      onTap: () {},
+      onTap: () => Get.to(()=> const ProductDetails()),
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),
