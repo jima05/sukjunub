@@ -65,7 +65,7 @@ class SukjunubProductMetaData extends StatelessWidget {
             const SukjunubProductTitleText(title: 'Status'),
             const SizedBox(width: SukjunubSizes.spaceBtwItems),
             Text(
-              'Instoke',
+              'In Stock',
               style: Theme.of(context).textTheme.titleMedium,
             ),
           ],
