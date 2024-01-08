@@ -1,23 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:sukjunub/features/shop/screens/cart/cart.dart';
 import 'package:sukjunub/utils/constants/colors.dart';
+import 'package:sukjunub/utils/helpers/helper_functions.dart';
 
 class SukjunubCartCounterIcon extends StatelessWidget {
   const SukjunubCartCounterIcon({
     super.key,
     required this.onPressed,
-    this.iconColor,
+    this.iconColor, this.counterBgColor, this.CounterTextColor,
   });
 
   final VoidCallback onPressed;
-  final Color? iconColor;
+  final Color? iconColor,counterBgColor, CounterTextColor;
 
   @override
   Widget build(BuildContext context) {
+    final dark = SukjunubHelperFunctions.isDarkMode(context);
     return Stack(
       children: [
         IconButton(
-            onPressed: onPressed,
+            onPressed: () => Get.to(() => const CartScreen()),
             icon: Icon(
               Iconsax.shopping_bag,
               color: iconColor,
@@ -28,7 +32,7 @@ class SukjunubCartCounterIcon extends StatelessWidget {
             width: 18,
             height: 18,
             decoration: BoxDecoration(
-                color: SukjunubColors.black.withOpacity(0.5),
+                color: counterBgColor?? (dark? SukjunubColors.white : SukjunubColors.black),
                 borderRadius: BorderRadius.circular(100)),
             child: Center(
                 child: Text('2',
