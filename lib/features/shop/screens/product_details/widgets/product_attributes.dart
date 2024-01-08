@@ -28,7 +28,7 @@ class SukjunubProductAttributes extends StatelessWidget {
               Row(
                 children: [
                   const SukjunubSectionHeading(
-                    title: 'Variation',
+                    title: 'Variation', 
                     showActionButton: false,
                   ),
                   const SizedBox(width: SukjunubSizes.spaceBtwItems),

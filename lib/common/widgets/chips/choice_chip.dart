@@ -27,7 +27,7 @@ class SukjunubChoiceChip extends StatelessWidget {
         labelStyle: TextStyle(color: selected ? SukjunubColors.white : null),
         avatar: isColor != null
             ? SukjunubCircularContainer(
-                width: 50, height: 50, backgroundColor: isColor!)
+                width: 50, height: 50, backgroundColor: isColor)
             : null,
         shape: isColor != null ? const CircleBorder() : null,
         labelPadding: isColor != null ? const EdgeInsets.all(0) : null,
