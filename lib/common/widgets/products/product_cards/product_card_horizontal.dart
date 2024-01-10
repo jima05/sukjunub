@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:sukjunub/common/styles/shadows.dart';
 import 'package:sukjunub/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:sukjunub/common/widgets/icons/circular_icon.dart';
 import 'package:sukjunub/common/widgets/images/rounded_image.dart';

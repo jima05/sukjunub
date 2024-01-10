@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:sukjunub/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:sukjunub/common/widgets/custom_shapes/containers/search_container.dart';
 import 'package:sukjunub/common/widgets/layouts/grid_layout.dart';
 import 'package:sukjunub/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:sukjunub/common/widgets/texts/section_heading.dart';
+import 'package:sukjunub/features/shop/screens/all_products/all_products.dart';
 import 'package:sukjunub/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:sukjunub/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:sukjunub/features/shop/screens/home/widgets/promo_slider.dart';
@@ -72,7 +74,7 @@ class HomeScreen extends StatelessWidget {
 
                     // Heading
                     SukjunubSectionHeading(
-                        title: 'Popular Products', onPressed: () {}),
+                        title: 'Popular Products', onPressed: () => Get.to(()=>const AllProducts())),
                     const SizedBox(height: SukjunubSizes.spaceBtwItems),
 
                     // Popular Products

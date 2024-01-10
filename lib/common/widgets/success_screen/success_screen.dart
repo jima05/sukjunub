@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:sukjunub/common/styles/spacing_styles.dart';
-import 'package:sukjunub/utils/constants/image_strings.dart';
 import 'package:sukjunub/utils/constants/sizes.dart';
 import 'package:sukjunub/utils/constants/text_strings.dart';
 import 'package:sukjunub/utils/helpers/helper_functions.dart';

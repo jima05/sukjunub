@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:sukjunub/common/widgets/appbar/appbar.dart';
 import 'package:sukjunub/common/widgets/appbar/tabbar.dart';
 import 'package:sukjunub/common/widgets/brands/brand_card.dart';
@@ -6,6 +7,7 @@ import 'package:sukjunub/common/widgets/custom_shapes/containers/search_containe
 import 'package:sukjunub/common/widgets/layouts/grid_layout.dart';
 import 'package:sukjunub/common/widgets/products/cart/cart_menu_icon.dart';
 import 'package:sukjunub/common/widgets/texts/section_heading.dart';
+import 'package:sukjunub/features/shop/screens/brands/all_brands.dart';
 import 'package:sukjunub/features/shop/screens/store/widgets/category_tab.dart';
 import 'package:sukjunub/utils/constants/colors.dart';
 import 'package:sukjunub/utils/constants/sizes.dart';
@@ -60,7 +62,7 @@ class StoreScreen extends StatelessWidget {
                       // Featured Brands
                       SukjunubSectionHeading(
                         title: 'Featured Brands',
-                        onPressed: () {},
+                        onPressed: () => Get.to(()=> const AllBrands()),
                       ),
                       const SizedBox(height: SukjunubSizes.spaceBtwItems / 1.5),
 

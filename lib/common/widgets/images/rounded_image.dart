@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sukjunub/utils/constants/colors.dart';
 import 'package:sukjunub/utils/constants/sizes.dart';
 
 class SukjunubRoundedImage extends StatelessWidget {
