@@ -10,7 +10,7 @@ class SukjunubRoundedImage extends StatelessWidget {
     required this.imageUrl,
     this.applyImageRadius=true,
     this.border,
-    this.backgroundColor=SukjunubColors.light,
+    this.backgroundColor,
     this.fit=BoxFit.contain,
     this.padding,
     this.isNetworkImage=false,

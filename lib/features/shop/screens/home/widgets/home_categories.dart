@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:sukjunub/common/widgets/image_text_widget/vertical_image.dart';
+import 'package:sukjunub/features/shop/screens/sub_category/sub_categories.dart';
 import 'package:sukjunub/utils/constants/image_strings.dart';
 
 class SukjunubHomeCategories extends StatelessWidget {
@@ -19,7 +21,7 @@ class SukjunubHomeCategories extends StatelessWidget {
           return SukjunubVerticalImageText(
             image: SukjunubImages.shoeIcon,
             title: 'Shoes',
-            onTap: () {},
+            onTap: () => Get.to(()=> const SubCategoriesScreen()),
           );
         },
       ),
