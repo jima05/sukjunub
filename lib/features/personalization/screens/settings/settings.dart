@@ -8,6 +8,7 @@ import 'package:sukjunub/common/widgets/list_tiles/user_profile_tile.dart';
 import 'package:sukjunub/common/widgets/texts/section_heading.dart';
 import 'package:sukjunub/features/personalization/screens/address/address.dart';
 import 'package:sukjunub/features/personalization/screens/profile/profile.dart';
+import 'package:sukjunub/features/shop/screens/order/order.dart';
 import 'package:sukjunub/utils/constants/colors.dart';
 import 'package:sukjunub/utils/constants/sizes.dart';
 
@@ -71,7 +72,7 @@ class SettingsScreen extends StatelessWidget {
                     icon: Iconsax.bag_tick,
                     title: 'My Orders',
                     subTitle: 'In-progress and Completed Orders',
-                    onTap: () {},
+                    onTap: () => Get.to(()=> const OrderScreen()),
                   ),
                   SukjunubSettingsMenuTile(
                     icon: Iconsax.bank,
