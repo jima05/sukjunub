@@ -26,19 +26,21 @@ class SuccessScreen extends StatelessWidget {
             children: [
               // Image
               Image(
-                image: const AssetImage(SukjunubImages.deliveredEmailIllustration),
+                image: AssetImage(image),
                 width: SukjunubHelperFunctions.screenWidth() * 0.6,
               ),
               const SizedBox(height: SukjunubSizes.spaceBtwSections),
 
               // Title & Sub-title
-              Text(SukjunubTexts.changeYourPasswordTitle,
+              Text(title,
                   style: Theme.of(context).textTheme.headlineMedium,
                   textAlign: TextAlign.center),
               const SizedBox(height: SukjunubSizes.spaceBtwItems),
-              Text(SukjunubTexts.changeYourPasswordSubTitle,
+              Text(subtitle,
                   style: Theme.of(context).textTheme.labelMedium,
                   textAlign: TextAlign.center),
+
+              const SizedBox(height: SukjunubSizes.spaceBtwSections),
 
               // Buttons
               SizedBox(

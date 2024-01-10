@@ -27,7 +27,7 @@ class SukjunubCartItem extends StatelessWidget {
                   ? SukjunubColors.darkerGrey
                   : SukjunubColors.light,
         ),
-        const SizedBox(height: SukjunubSizes.spaceBtwItems),
+        const SizedBox(width: SukjunubSizes.spaceBtwItems),
     
         // Title , Price & Size
         Column(

@@ -29,7 +29,7 @@ class SukjunubBillingPaymentSection extends StatelessWidget {
               padding: const EdgeInsets.all(SukjunubSizes.sm),
               child: const Image(image: AssetImage(SukjunubImages.paypal), fit: BoxFit.contain,),
             ),
-        const SizedBox(height: SukjunubSizes.spaceBtwItems / 2),
+        const SizedBox(width: SukjunubSizes.spaceBtwItems / 2),
         Text('Paypal', style: Theme.of(context).textTheme.bodyLarge),
 
           ],
