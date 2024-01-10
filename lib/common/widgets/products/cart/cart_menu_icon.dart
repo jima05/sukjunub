@@ -9,11 +9,11 @@ class SukjunubCartCounterIcon extends StatelessWidget {
   const SukjunubCartCounterIcon({
     super.key,
     required this.onPressed,
-    this.iconColor, this.counterBgColor, this.CounterTextColor,
+    this.iconColor, this.counterBgColor, this.counterTextColor,
   });
 
   final VoidCallback onPressed;
-  final Color? iconColor,counterBgColor, CounterTextColor;
+  final Color? iconColor,counterBgColor, counterTextColor;
 
   @override
   Widget build(BuildContext context) {
