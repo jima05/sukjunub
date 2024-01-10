@@ -7,8 +7,8 @@ import 'package:sukjunub/utils/constants/image_strings.dart';
 import 'package:sukjunub/utils/constants/sizes.dart';
 import 'package:sukjunub/utils/helpers/helper_functions.dart';
 
-class SukjunubCartIcon extends StatelessWidget {
-  const SukjunubCartIcon({
+class SukjunubCartItem extends StatelessWidget {
+  const SukjunubCartItem({
     super.key,
   });
 
