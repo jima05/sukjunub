@@ -48,6 +48,8 @@ dependencies:
 
 
 
+# Firebase
+  firebase_core: ^2.24.2
 
 
 
