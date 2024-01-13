@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:sukjunub/features/authentication/controllers/onboarding_controller.dart';
+import 'package:sukjunub/features/authentication/controllers/onboarding/onboarding_controller.dart';
 import 'package:sukjunub/utils/constants/colors.dart';
 import 'package:sukjunub/utils/constants/sizes.dart';
 import 'package:sukjunub/utils/device/device_utility.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sukjunub/features/authentication/screens/onboarding/onboarding.dart';
+import 'package:sukjunub/bindings/general_bindings.dart';
 import 'package:sukjunub/utils/constants/colors.dart';
 import 'package:sukjunub/utils/theme/theme.dart';
 
@@ -14,6 +14,7 @@ class App extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: SukjunubTheme.lightTheme,
       darkTheme: SukjunubTheme.darkTheme,
+      initialBinding: GeneralBindings(),
       // Show loader or circular prograss indicator meanwhile authentication repo is deciding to show relevat screens
       home: const Scaffold(
           backgroundColor: SukjunubColors.primary,
