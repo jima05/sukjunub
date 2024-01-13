@@ -80,7 +80,9 @@ class UserModel {
         email: data['Email'] ?? '',
         phoneNumber: data['PhoneNumber'] ?? '',
         profilePicture: data['ProfilePicure'] ?? '',
-      ); 
-    } 
+      );
+    } else {
+      return UserModel.empty();
+    }
   }
 }
