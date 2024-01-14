@@ -15,7 +15,7 @@ class VerifyEmailController extends GetxController {
   void onInit() {
     sendEmailVerification();
     setTimerForAutoRedirect();
-    checkEmailVerificationStatus();
+    // checkEmailVerificationStatus();
     super.onInit();
   }
 

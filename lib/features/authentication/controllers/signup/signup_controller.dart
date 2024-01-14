@@ -31,7 +31,7 @@ class SignupController extends GetxController {
     try {
       // Start Loading
       SukjunubFullScreenLoader.openLoadingDialog(
-          'We are processin your information...',
+          'We are processing your information...',
           SukjunubImages.docerAnimation);
 
       // Check Internet Connectivity
@@ -85,7 +85,7 @@ class SignupController extends GetxController {
           message: 'Your account has been created! verify Email to continue,');
 
       // Move to verify email Screen
-      Get.to(() =>  VerifyEmailScreen(email: email.text.trim()));
+      Get.to(() => VerifyEmailScreen(email: email.text.trim()));
     } catch (e) {
       // Remove Loader
       SukjunubFullScreenLoader.stopLoading();

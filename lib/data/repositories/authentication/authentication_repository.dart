@@ -22,32 +22,57 @@ class AuthenticationRepository extends GetxController {
   // Called from main.dart on App launch
   @override
   void onReady() {
+    // Remove Native spalsh Screen
     FlutterNativeSplash.remove();
+    //Then redirect to the appropriate screen
     screenRedirect();
   }
 
   // Function to show Relevant Scrrens
   screenRedirect() async {
   final user = _auth.currentUser;
-
+// If user is not null
     if (user != null) {
+      // if user is verified
       if (user.emailVerified) {
+        // Navigate to Nagigation Menu(Home)
         Get.offAll(() => const NavigationMenu());
       } else {
+        // If user is not Verified, Navigate to the Verification Screen
         Get.offAll(() => VerifyEmailScreen(email: _auth.currentUser?.email));
       }
     } else {
       // Local Storage
       deviceStorage.writeIfNull('isFirstTime', true);
+      //Check if it is the first time launching the app
       deviceStorage.read('isFirstTime') != true
-          ? Get.offAll(() => const LoginScreen())
-          : Get.offAll(() => const OnBoardingScreen());
+          ? Get.offAll(() => const LoginScreen()) // Loginscreen if NOT
+          : Get.offAll(() => const OnBoardingScreen());//Onboarding if 
     }
   }
 
   /*--------------Email & Password Sign-In---------*/
 
   // [Email Authentication] - SignIn
+  Future<UserCredential> loginWithEmailAndPassword(
+      String email, String password) async {
+    try {
+      return await _auth.signInWithEmailAndPassword(
+          email: email, password: password);
+    } on FirebaseAuthException catch (e) {
+      throw SukjunubFirebaseAuthException(e.code).message;
+    } on FirebaseException catch (e) {
+      throw SukjunubFirebaseException(e.code).message;
+    } on FormatException catch (_) {
+      throw const SukjunubFormatException();
+    } on PlatformException catch (e) {
+      throw SukjunubPlatformException(e.code).message;
+    } catch (e) {
+      throw 'Something went wrong. Please try again';
+    }
+  }
+
+
   // [Email Authentication] - Register
   Future<UserCredential> registerWithEmailAndPassword(
       String email, String password) async {
