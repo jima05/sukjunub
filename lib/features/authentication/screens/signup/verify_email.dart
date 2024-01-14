@@ -1,25 +1,28 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sukjunub/common/widgets/success_screen/success_screen.dart';
-import 'package:sukjunub/features/authentication/screens/login/login.dart';
+import 'package:sukjunub/data/repositories/authentication/authentication_repository.dart';
+import 'package:sukjunub/features/authentication/controllers/signup/verify_email_controller.dart';
 import 'package:sukjunub/utils/constants/image_strings.dart';
 import 'package:sukjunub/utils/constants/sizes.dart';
 import 'package:sukjunub/utils/constants/text_strings.dart';
 import 'package:sukjunub/utils/helpers/helper_functions.dart';
 
 class VerifyEmailScreen extends StatelessWidget {
-  const VerifyEmailScreen({super.key});
+  const VerifyEmailScreen({super.key, this.email});
+
+  final String? email;
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(VerifyEmailController());
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
         actions: [
           IconButton(
-              onPressed: () => Get.offAll(() => const LoginScreen()),
-              icon: const Icon(CupertinoIcons.clear)),
+              onPressed: () => AuthenticationRepository.instance.logout(),
+              icon: const Icon(CupertinoIcons.clear),),
         ],
       ),
       body: SingleChildScrollView(
@@ -41,7 +44,7 @@ class VerifyEmailScreen extends StatelessWidget {
                   style: Theme.of(context).textTheme.headlineMedium,
                   textAlign: TextAlign.center),
               const SizedBox(height: SukjunubSizes.spaceBtwItems),
-              Text("jimabenjamin4@gmail.com",
+              Text(email ?? '',
                   style: Theme.of(context).textTheme.labelLarge,
                   textAlign: TextAlign.center),
               const SizedBox(height: SukjunubSizes.spaceBtwItems),
@@ -53,22 +56,17 @@ class VerifyEmailScreen extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () => Get.to(
-                    () =>  SuccessScreen(
-                      image: SukjunubImages.staticSuccessIllustration,
-                      title: SukjunubTexts.yourAccountCreatedTitle,
-                      subtitle: SukjunubTexts.yourAccountCreatedSubTitle,
-                      onPressed: () => Get.to(()=> const LoginScreen()),
-                    ),
-                  ),
+                  onPressed: () => controller.checkEmailVerificationStatus(),
                   child: const Text(SukjunubTexts.sContinue),
                 ),
               ),
               const SizedBox(height: SukjunubSizes.spaceBtwItems),
+
+              // Resend Email Verificaton Button
               SizedBox(
                 width: double.infinity,
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () => controller.sendEmailVerification(),
                   child: const Text(SukjunubTexts.resendEmail),
                 ),
               ),
